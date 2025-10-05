@@ -1,0 +1,310 @@
+/* Fuente importada de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset básico para eliminar márgenes y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif; 
+}
+
+/* Header y Navbar */
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0005;
+    backdrop-filter: blur(20px);
+    z-index: -1;
+}
+
+.active{
+    background: linear-gradient(to right bottom, #AED4E6, #1C3144);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.contacto{
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+    background: linear-gradient(to right bottom, #AED4E6, #1C3144);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contacto:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+.navbar a{
+    font-size: 1.1rem;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1.1em;
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    font-size: 2rem;
+    right: 5%;
+    color: #FFF;
+    cursor: pointer;
+    display: none;
+}
+
+/* Main */
+.titulo-principal{
+    font-size: 20px;
+    margin: 40px;
+    padding: 10px;
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to bottom right, #AED4E6, #1C3144);
+    color: #FFF;
+    padding: 50px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.row-footer{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col-footer{
+    flex-basis: 25%;
+    padding: 10px;;
+}
+
+.logo-footer{
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 30px;
+
+}
+
+.col-footer h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-footer{
+    width: fit-content;
+    border-bottom: 1px solid #CCC;
+    margin: 20px 0;
+}
+
+footer ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.tallas{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.col-footer a i{
+    transition: all 0.3s ease;
+}
+
+.col-footer a:hover i{
+    transform: translateY(-5px);
+}
+
+.fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #FFF;
+    margin-right: 5px;
+}
+
+hr{
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid #CCC;
+    margin: 20px auto;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.titulos-footer{
+    font-size: 20px;
+}
+
+/* Screen Media para Responsive Design */
+
+/* For large devices */
+@media (max-width: 992px) {
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+
+/* For medium devices */
+
+@media (max-width: 768px) {
+
+    /* Header */
+    .icons{
+        display: inline-flex;
+    }
+
+    /* Navbar */
+    .navbar{
+        background-color: #0005;
+        backdrop-filter: blur(20px);
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0.5rem 1rem #0005;
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar{
+        height: 26rem;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    /* Footer */
+
+    footer{
+        bottom: unset;
+    }
+
+    .col-footer{
+    flex-basis: 100%;
+    }
+
+    .col-footer:nth-child(2), .col-footer:nth-child(3){
+        flex-basis: 100%;
+    }
+}
+
+/* For small devices */
+
+@media (max-width: 425px) {
+    /* Header */
+    .logo{
+        width: 35px;
+    }
+
+    /* Navbar */
+    .navbar{
+        background-color: #0005;
+        backdrop-filter: blur(20px);
+    }
+
+    .img-section{
+        transform: scale(1.1);
+    }
+
+    .titulo {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .texto {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .boton-comprar-strivexly {
+        padding: 5px 20px;
+        font-size: 10px;
+    }
+
+
+    /* Footer */
+    footer{
+        bottom: unset;
+    }
+
+    .col-footer{
+        flex-basis: 100%;
+    }
+
+    .col-footer:nth-child(2), .col-footer:nth-child(3){
+        flex-basis: 100%;
+    }
+}
