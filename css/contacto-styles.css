@@ -42,7 +42,7 @@ body {
 }
 
 .active{
-    background: linear-gradient(to right bottom, #AED4E6, #1C3144);
+    background: #AED4E6;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

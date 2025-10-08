@@ -157,7 +157,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    max-height: auto;
+    height: auto;
     object-fit: cover;
 }
 
@@ -730,6 +730,14 @@ hr{
         font-size: 14px;
     }
 
+    .card-carrusel img{
+        margin-top: 10px;
+    }
+
+    .boton-carrusel{
+        margin-top: 20px;
+    }
+
     .descripcion-articulo {
         width: 100%;
         height: auto;
@@ -803,6 +811,10 @@ hr{
     /* Nuestros Productos */
     .eslogan{
         letter-spacing: 3px;
+    }
+
+    .card-carrusel img{
+        margin-top: 10px;
     }
 
     /* Huella de carbono */

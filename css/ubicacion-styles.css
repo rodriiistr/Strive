@@ -308,6 +308,16 @@ hr{
         text-align: center;
     }
 
+    /* Main */
+    .container{
+        display: block;
+    }
+
+    iframe{
+        width: 100%;
+        margin: 15px auto;
+    }
+
     /* Footer */
 
     footer{
