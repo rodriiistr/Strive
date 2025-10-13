@@ -244,7 +244,7 @@
 /* Seccion: Conoce como reducimos nuestra huella de carbono */
 
 .titulo-articulo{
-    margin-top: 60px;
+    margin-top: 60px 0;
     text-align: center;
     font-size: 50px;
     padding: 0 10px;
@@ -760,6 +760,11 @@ hr{
     input:checked + label.card-articulo .descripcion-articulo {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    /* Echa un vistazo a Strive */
+    .article__text{
+        font-size: 28px;
     }
 
     /* Footer */
