@@ -368,6 +368,11 @@ hr{
         width: 35px;
     }
 
+    .header{
+        position: relative;
+        background-color: #000D;
+    }
+
     /* Navbar */
     .navbar{
         background-color: #0005;
@@ -407,6 +412,11 @@ hr{
     /* Header */
     .icons{
         display: inline-flex;
+    }
+
+    .header{
+        position: relative;
+        background-color: #000D;
     }
 
     /* Navbar */
