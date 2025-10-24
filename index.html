@@ -12,26 +12,41 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <a href="index.html"><img class="logo" src="assets/images/logo/logo-white.png" alt="Logo Strive"></a>
+        <nav class="nav nav-container">
+            <div class="nav-data">
+                <a href="../index.html" class="nav-logo nav-link"> 
+                    <img src="../assets/images/logo/logo-white.png" class="nav-img" alt="Logo Strive"> Strive
+                </a>
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars nav-hamburguesa"></i>
+                    <i class="fa-solid fa-xmark nav-cerrar"></i>
+                </div>
+            </div>
 
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-            <i class="fa-solid fa-bars" id="menu-icon"></i>
-            <i class="fa-solid fa-xmark" id="close-icon"></i>
-        </label>
-
-        <nav class="navbar">
-            <a href="index.html" class="active" style="--i:0">Inicio</a>
-            <a href="pages/hombre.html" class="" style="--i:1">Hombre</a>
-            <a href="pages/mujer.html" class="" style="--i:2">Mujer</a>
-            <a href="pages/niño.html" class="" style="--i:3">Niño/a</a>
-            <a href="pages/acercadestrive.html" class="" style="--i:4">Acerca de Strive</a>
-            <a href="pages/contacto.html" class="" style="--i:5">Contacto</a>
-            <a href="#" class="" style="--i:6"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="pages/login.html" class="" style="--i:7"><i class="fa-solid fa-user"></i></a>
+            <!-- Nav Menú -->
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <!-- Dropdown -->
+                    <li class="dropdown-item">
+                        <div class="nav-link">
+                            Ropa <i class="fa-solid fa-caret-down dropdown-flecha"></i>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/hombre.html" class="dropdown-link"><i class="fa-solid fa-person"></i>Hombre</a></li>
+                            <li><a href="pages/mujer.html" class="dropdown-link"><i class="fa-solid fa-person-dress"></i>Mujer</a></li>
+                            <li><a href="pages/niño.html" class="dropdown-link"><i class="fa-solid fa-child"></i>Niño/a</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pages/acercadestrive.html" class="nav-link">Acerca de</a></li>
+                    <li><a href="pages/contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="pages/login.html" class="nav-link">Iniciar Sesión</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-
+    
     <main>
         <!-- Seccion: Strive x Lamine Yamal -->
         <section class="section-strivexly">
@@ -173,7 +188,7 @@
         <!-- Seccion: Articulos -->
 
         <div class="container">
-            <h2 class="article__text">Echa un vistazo más de cerca a Strive</h2>
+            <h2 class="article__text">Strive como no lo conocías</h2>
             <div class="card__container">
                 <!-- Articulo 1 -->
                 <article class="card__article">
@@ -209,6 +224,191 @@
                 </article>
             </div>
         </div> 
+
+        <!-- Carrusel Opiniones -->
+        <h2 class="titulo-carrusel-infinito">Nuestros Clientes</h2>
+        <p class="subtitulo-carrusel-infinito">Porque tu opinión es importante</p>
+        <section class="carrusel-infinito">
+            <!-- Carruseles 1 -->
+            <div class="contenido-carrusel-infinito">
+                <!-- Persona 1 -->
+                <article class="carrusel-card-infinito">
+                    <div class="carrusel-img-infinito">
+                        <img src="assets/images/perfiles/perfil1.png" alt="Persona 1" class="imagen-carrusel-infinito">
+                    </div>
+
+                    <h3 class="carrusel-nombre-infinito">Ana Guerrero</h3>
+
+                    <div class="carrusel-calificacion-infinito">
+                        <div class="carrusel-estrellas-infinito">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="carrusel-numero-infinito">5.0</h3>
+                    </div>
+
+                        <p>“Me encanta la calidad de los productos, siempre superan mis expectativas.”</p>
+                </article>
+
+                <!-- Persona 2 -->
+                <article class="carrusel-card-infinito">
+                    <div class="carrusel-img-infinito">
+                        <img src="assets/images/perfiles/perfil2.png" alt="Persona 2" class="imagen-carrusel-infinito">
+                    </div>
+
+                    <h3 class="carrusel-nombre-infinito">Alexa Gutiérrez</h3>
+
+                    <div class="carrusel-calificacion-infinito">
+                        <div class="carrusel-estrellas-infinito">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="carrusel-numero-infinito">5.0</h3>
+                    </div>
+
+                        <p>“El envío fue rapidísimo y todo llegó en perfecto estado.”</p>
+                </article>
+
+                <!-- Persona 3 -->
+                <article class="carrusel-card-infinito">
+                    <div class="carrusel-img-infinito">
+                        <img src="assets/images/perfiles/perfil3.png" alt="Persona 3" class="imagen-carrusel-infinito">
+                    </div>
+
+                    <h3 class="carrusel-nombre-infinito">Jorge Esquivel</h3>
+
+                    <div class="carrusel-calificacion-infinito">
+                        <div class="carrusel-estrellas-infinito">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="carrusel-numero-infinito">5.0</h3>
+                    </div>
+
+                        <p>“El diseño es increíble y los materiales se sienten duraderos.”</p>
+                </article>
+
+                <!-- Persona 4 -->
+                <article class="carrusel-card-infinito">
+                    <div class="carrusel-img-infinito">
+                        <img src="assets/images/perfiles/perfil4.png" alt="Persona 4" class="imagen-carrusel-infinito">
+                    </div>
+
+                    <h3 class="carrusel-nombre-infinito">Carlos Jiménez</h3>
+
+                    <div class="carrusel-calificacion-infinito">
+                        <div class="carrusel-estrellas-infinito">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="carrusel-numero-infinito">5.0</h3>
+                    </div>
+                        <p>“Excelente atención al cliente, resolvieron todas mis dudas de inmediato.”</p>
+                </article>
+            </div>
+
+            <!-- Carruseles 2 -->
+            <div class="contenido-carrusel-infinito carrusel-reverso-infinito">
+                <!-- Persona 1 -->
+                <article class="carrusel-card-infinito">
+                    <div class="carrusel-img-infinito">
+                        <img src="assets/images/perfiles/perfil1.png" alt="Persona 1" class="imagen-carrusel-infinito">
+                    </div>
+
+                    <h3 class="carrusel-nombre-infinito">Ana Guerrero</h3>
+
+                    <div class="carrusel-calificacion-infinito">
+                        <div class="carrusel-estrellas-infinito">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="carrusel-numero-infinito">5.0</h3>
+                    </div>
+
+                        <p>“Me encanta la calidad de los productos, siempre superan mis expectativas.”</p>
+                </article>
+
+                <!-- Persona 2 -->
+                <article class="carrusel-card-infinito">
+                    <div class="carrusel-img-infinito">
+                        <img src="assets/images/perfiles/perfil2.png" alt="Persona 2" class="imagen-carrusel-infinito">
+                    </div>
+
+                    <h3 class="carrusel-nombre-infinito">Alexa Gutiérrez</h3>
+
+                    <div class="carrusel-calificacion-infinito">
+                        <div class="carrusel-estrellas-infinito">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="carrusel-numero-infinito">5.0</h3>
+                    </div>
+
+                        <p>“El envío fue rapidísimo y todo llegó en perfecto estado.”</p>
+                </article>
+
+                <!-- Persona 3 -->
+                <article class="carrusel-card-infinito">
+                    <div class="carrusel-img-infinito">
+                        <img src="assets/images/perfiles/perfil3.png" alt="Persona 3" class="imagen-carrusel-infinito">
+                    </div>
+
+                    <h3 class="carrusel-nombre-infinito">Jorge Esquivel</h3>
+
+                    <div class="carrusel-calificacion-infinito">
+                        <div class="carrusel-estrellas-infinito">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="carrusel-numero-infinito">5.0</h3>
+                    </div>
+
+                        <p>“El diseño es increíble y los materiales se sienten duraderos.”</p>
+                </article>
+
+                <!-- Persona 4 -->
+                <article class="carrusel-card-infinito">
+                    <div class="carrusel-img-infinito">
+                        <img src="assets/images/perfiles/perfil4.png" alt="Persona 4" class="imagen-carrusel-infinito">
+                    </div>
+
+                    <h3 class="carrusel-nombre-infinito">Carlos Jiménez</h3>
+
+                    <div class="carrusel-calificacion-infinito">
+                        <div class="carrusel-estrellas-infinito">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="carrusel-numero-infinito">5.0</h3>
+                    </div>
+                        <p>“Excelente atención al cliente, resolvieron todas mis dudas de inmediato.”</p>
+                </article>
+            </div>
+        </section>
     </main>   
 
     <!-- Footer -->
@@ -249,5 +449,8 @@
         <hr>
         <p class="copyright">© 2025 Strive Inc. Todos los derechos reservados</p>
     </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
 </body>
 </html>

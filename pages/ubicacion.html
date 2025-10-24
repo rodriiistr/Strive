@@ -11,23 +11,38 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <a href="../index.html"><img class="logo" src="../assets/images/logo/logo-white.png" alt="Logo Strive"></a>
+        <nav class="nav nav-container">
+            <div class="nav-data">
+                <a href="../index.html" class="nav-logo nav-link"> 
+                    <img src="../assets/images/logo/logo-white.png" class="nav-img" alt="Logo Strive"> Strive
+                </a>
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars nav-hamburguesa"></i>
+                    <i class="fa-solid fa-xmark nav-cerrar"></i>
+                </div>
+            </div>
 
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-            <i class="fa-solid fa-bars" id="menu-icon"></i>
-            <i class="fa-solid fa-xmark" id="close-icon"></i>
-        </label>
-
-        <nav class="navbar">
-            <a href="../index.html" class="" style="--i:0">Inicio</a>
-            <a href="hombre.html" class="" style="--i:1">Hombre</a>
-            <a href="mujer.html" class="" style="--i:2">Mujer</a>
-            <a href="niño.html" class="" style="--i:3">Niño/a</a>
-            <a href="acercadestrive.html" class="" style="--i:4">Acerca de Strive</a>
-            <a href="contacto.html" class="" style="--i:5">Contacto</a>
-            <a href="#" class="" style="--i:6"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="login.html" class="" style="--i:7"><i class="fa-solid fa-user"></i></a>
+            <!-- Nav Menú -->
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <!-- Dropdown -->
+                    <li class="dropdown-item">
+                        <div class="nav-link">
+                            Ropa <i class="fa-solid fa-caret-down dropdown-flecha"></i>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="hombre.html" class="dropdown-link"><i class="fa-solid fa-person"></i>Hombre</a></li>
+                            <li><a href="mujer.html" class="dropdown-link"><i class="fa-solid fa-person-dress"></i>Mujer</a></li>
+                            <li><a href="niño.html" class="dropdown-link"><i class="fa-solid fa-child"></i>Niño/a</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="acercadestrive.html" class="nav-link">Acerca de</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                    <li><a href="#" class="nav-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -121,5 +136,8 @@
         <hr>
         <p class="copyright">© 2025 Strive Inc. Todos los derechos reservados</p>
     </footer>
+
+    <!-- JS -->
+    <script src="../js/main.js"></script>
 </body>
 </html>

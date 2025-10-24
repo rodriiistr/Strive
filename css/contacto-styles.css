@@ -16,87 +16,272 @@ body {
     padding: 0;
 }
 
-/* Header y Navbar */
+/* Header y navbar */
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container-header{
+    min-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.nav-img{
+    width: 30px;
+}
+
 .header{
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.3rem 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: #1B1B1E;
+    box-shadow: 0 0 20px #0005;
     z-index: 100;
 }
 
-.header::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.nav{
+    height: 4.1rem;
+}
+
+.nav-logo, .nav-hamburguesa, .nav-cerrar{
+    color: #FFF;
+}
+
+.nav-data{
     height: 100%;
-    background: linear-gradient(to right bottom, #AED4E6, #1C3144);
-    backdrop-filter: blur(20px);
-    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
 }
 
-.active{
-    background: #AED4E6;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+.nav-logo{
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: 600;
 }
 
-.contacto{
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    border: none;
-    border-radius: 1000px;
-    cursor: pointer;
-    background: linear-gradient(to right bottom, #AED4E6, #1C3144);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.contacto:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.logo{
-    width: 50px;
-    cursor: pointer;
-}
-
-.navbar a{
-    font-size: 1.1rem;
-    color: #FFF;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 1.1em;
-}
-
-#check{
-    display: none;
-}
-
-.icons{
+.nav-toggle{
     position: relative;
-    font-size: 2rem;
-    right: 5%;
-    color: #FFF;
+    width: 32px;
+    height: 32px;
+}
+
+.nav-hamburguesa, .nav-cerrar{
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.5rem;
     cursor: pointer;
-    display: none;
+    transition: opacity .1s transform .4s;
+}
+
+.nav-cerrar{
+    opacity: 0;
+}
+
+/* Navegación en Moviles */
+@media screen and (max-width: 1023px) {
+    .nav-menu{
+        position: absolute;
+        left: 0;
+        top: 2.5rem;
+        width: 100%;
+        backdrop-filter: blur(20px);
+        height: calc(100vh - 4.1rem);
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0;
+        transition: top .3s, opacity .3s;
+    }
+
+    .nav-menu::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .nav-list{
+        background-color: #1B1B1E;
+        padding-top: 1rem;
+    }
+}
+
+.nav-link{
+    color: #FFF;
+    background-color: #1B1B1E;
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.nav-link:hover{
+    background-color: #303036;
+}
+
+.mostrar-menu{
+    opacity: 1;
+    top: 4.1rem;
+    pointer-events: initial;
+}
+
+.mostrar-icono .nav-hamburguesa{
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.mostrar-icono .nav-cerrar{
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+.dropdown-item{
+    cursor: pointer;
+}
+
+.dropdown-flecha{
+    font-size: 1.25rem;
+    font-weight: initial;
+    transition: transform .4s;
+}
+
+.dropdown-link{
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    color: #FFF;
+    background-color: #303036;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: 600;
+    transition: background-color .3s;
+}
+
+.dropdown-link i{
+    font-size: 1.5rem;
+    font-weight: initial;
+}
+
+.dropdown-link:hover{
+    background-color: #26262B;
+}
+
+.dropdown-menu{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease-out;
+}
+
+.dropdown-item:hover .dropdown-menu{
+    max-height: 1000px;
+    transition: max-height .4s ease-in;
+}
+
+.dropdown-item:hover .dropdown-flecha{
+    transform: rotate(180deg);
+}
+
+/* Brekapoints */
+@media screen and (max-width: 340px) {
+    .container-header{
+        margin-inline: 1rem;
+    }
+
+    .nav-link{
+        padding-inline: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container-header{
+        margin-inline: auto;
+    }
+
+    .nav{
+        height: 5.5rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 30px;
+    }
+
+    .nav-img{
+        width: 60px;
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+
+    .nav-list{
+        height: 100%;
+        display: flex;
+        column-gap: 4rem;
+    }
+
+    .nav-link{
+        height: 100%;
+        padding: 0;
+        justify-content: initial;
+        column-gap: .25rem;
+    }
+
+    .nav-link:hover{
+        background-color: transparent;
+    }
+
+    .dropdown-item{
+        position: relative;
+    }
+
+    .dropdown-menu{
+        max-height: initial;
+        overflow: initial;
+        position: absolute;
+        left: 0;
+        top: 6rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s, top .3s;
+    }
+
+    .dropdown-link{
+        padding-inline: 1rem 3.5rem;
+    }
+
+    .dropdown-item:hover .dropdown-menu{
+        opacity: 1;
+        top: 5.5rem;
+        pointer-events: initial;
+        transition: top .3s;
+    }
+
+    /* Mostrar dropdown en móvil cuando la clase open está activa */
+    .dropdown-item.open .dropdown-menu {
+        max-height: 1000px;
+        pointer-events: initial;
+        opacity: 1;
+        transition: max-height 0.4s ease-in, opacity 0.3s;
+    }
+
+    .dropdown-item.open .dropdown-flecha {
+        transform: rotate(180deg);
+    }
 }
 
 /* Main */
 main{
     display: flex;
-    justify-content: center; /* lo centra horizontalmente */
-    align-items: center;     /* lo centra verticalmente */
+    justify-content: center;
+    align-items: center;
     margin: 20px 0 40px 0;
 }
 
@@ -286,6 +471,7 @@ main{
     box-shadow: 0 5px 15px rgba(28, 49, 68, 0.3);
 }
 
+
 /* Elemento decorativo circular */
 .circulo-decorativo {
     position: absolute;
@@ -447,13 +633,6 @@ hr{
 }
 
 /* Screen Media para Responsive Design */
-
-/* For large devices */
-@media (max-width: 992px) {
-    .header{
-        padding: 1.3rem 5%;
-    }
-}
 
 /* For medium devices */
 
